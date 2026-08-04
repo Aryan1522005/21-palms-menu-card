@@ -3,140 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tortuga Café Menu</title>
-    <!-- Importing Google Fonts for the script and clean sans-serif typography -->
+    <title>The T Hotels - Menus</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playball&display=swap');
 
         body, html {
             margin: 0;
             padding: 0;
-            background-color: #F8B127; /* Mustard Yellow Background */
-            color: #ffffff; /* White text for paragraphs */
             font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Shared layout for both halves */
+        .section {
+            flex: 1;
+            padding: 30px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            justify-content: center;
         }
 
-        .container {
-            max-width: 600px;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* Tortuga Cafe Theme (Top) */
+        .tortuga-theme {
+            background-color: #F8B127; /* Mustard Yellow */
+            color: #38104E; /* Dark Purple */
         }
 
-        /* Logo Typography Placeholder */
+        /* T Rooftop Lounge Theme (Bottom) */
+        .rooftop-theme {
+            background-color: #38104E; /* Dark Purple */
+            color: #ffffff; /* White text */
+        }
+
+        /* Typography */
         .logo-text {
             font-family: 'Playball', cursive;
-            color: #38104E; /* Dark Purple */
-            font-size: 72px;
-            margin-bottom: 0;
-            line-height: 0.8;
-            font-weight: normal;
+            font-size: 56px;
+            margin: 0;
+            line-height: 1;
         }
 
         .logo-sub {
-            font-family: 'Montserrat', sans-serif;
-            color: #38104E;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 300;
             letter-spacing: 2px;
-            margin-top: 10px;
-            margin-bottom: 5px;
+            margin: 5px 0 15px 0;
+        }
+
+        .rooftop-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 4px;
+            color: #F8B127;
+            margin: 0;
+        }
+
+        .rooftop-sub {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #F8B127;
+            margin: 5px 0 15px 0;
         }
 
         .dining-text {
-            color: #38104E;
-            font-size: 11px;
-            letter-spacing: 2px;
+            font-size: 10px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-bottom: 40px;
             font-weight: 600;
+            margin-bottom: 15px;
         }
 
         .description {
-            font-size: 14px;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 18px;
+            font-size: 13px;
+            line-height: 1.5;
+            max-width: 500px;
+            margin-bottom: 20px;
             font-weight: 400;
         }
 
-        /* Menu Buttons Layout */
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            align-items: center;
-            margin-top: 30px;
-            margin-bottom: 40px;
-        }
-
+        /* Buttons */
         .menu-btn {
-            display: block;
+            display: inline-block;
             width: 80%;
             max-width: 250px;
-            padding: 16px;
-            margin: 10px 0;
-            background-color: #38104E; /* Dark Purple */
-            color: #F8B127; /* Yellow Text */
+            padding: 14px;
             text-align: center;
             text-decoration: none;
             font-size: 16px;
             font-weight: 600;
             border-radius: 30px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Button specific colors to contrast with their backgrounds */
+        .food-btn {
+            background-color: #38104E; 
+            color: #F8B127; 
             border: 2px solid #38104E;
         }
 
-        .menu-btn:hover {
-            transform: scale(1.05);
-            background-color: transparent;
-            color: #38104E;
+        .bar-btn {
+            background-color: #F8B127; 
+            color: #38104E; 
+            border: 2px solid #F8B127;
         }
 
-        /* Bottom Tagline */
+        /* Tagline at the very bottom */
         .tagline {
             font-family: 'Playball', cursive;
-            color: #38104E;
-            font-size: 36px;
-            margin-top: 20px;
+            color: #F8B127;
+            font-size: 32px;
+            margin-top: 25px;
         }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        
-        <!-- Note: If you want to use your actual logo image instead of text, 
-             delete the 3 headings below and uncomment the image tag, replacing 'logo.png' 
-             with your uploaded logo file name -->
-             
-        <!-- <img src="logo.png" alt="Tortuga Cafe Logo" style="width: 250px; margin-bottom: 30px;"> -->
 
+    <!-- TORTUGA CAFE SECTION -->
+    <div class="section tortuga-theme">
         <h1 class="logo-text">Tortuga</h1>
         <h2 class="logo-sub">CAFÉ</h2>
         <div class="dining-text">Multicuisine All Day Dining</div>
-
+        
         <p class="description">
             Located within the opulent confines of The T Hotel, Pune - Tortuga Café offers an exceptional all-day dining experience that tantalizes the senses. A menu that celebrates both Indian and global cuisines, our guests are treated to a diverse selection of dishes, all meticulously prepared by a team of expert chefs.
         </p>
-        <p class="description">
-            The ambiance is designed for comfort and elegance, featuring cozy seating arrangements and tasteful decor that create an inviting atmosphere for both casual diners and special occasions.
-        </p>
-        <p class="description">
-            We meticulously choose, only the finest ingredients, ensuring that each dish is not only flavorful but also crafted with care and precision. Whether you're enjoying a leisurely breakfast, a sumptuous lunch, or an exquisite dinner, Tortuga Café promises an unforgettable culinary journey.
+
+        <!-- Button immediately follows the first paragraph with #view=FitH to prevent zooming out -->
+        <a href="The T Hotels Food Menu 291124.pdf#view=FitH" target="_blank" class="menu-btn food-btn">🍽️ Food Menu</a>
+    </div>
+
+    <!-- T ROOFTOP LOUNGE SECTION -->
+    <div class="section rooftop-theme">
+        <h1 class="rooftop-logo">ROOFTOP</h1>
+        <h1 class="rooftop-logo" style="font-weight: 300;">LOUNGE</h1>
+        <div class="rooftop-sub">BBQ & SEAFOOD SPECIALTY</div>
+        
+        <p class="description" style="color: rgba(255,255,255,0.9);">
+            At T Rooftop Lounge, we whip up a delicious concoction of seafood delights, sizzling barbecue, crafty cocktails, and entertainment that'll have you grooving in your seat!
         </p>
 
-        <div class="btn-container">
-            <a href="The T Hotels Food Menu 291124.pdf" target="_blank" class="menu-btn">🍽️ Food Menu</a>
-            <a href="The T Hotels Bar Menu 291124.pdf" target="_blank" class="menu-btn">🍸 Bar Menu</a>
-        </div>
+        <!-- Button immediately follows the first paragraph with #view=FitH to prevent zooming out -->
+        <a href="The T Hotels Bar Menu 291124.pdf#view=FitH" target="_blank" class="menu-btn bar-btn">🍸 Bar Menu</a>
 
         <div class="tagline">relax. rejuvenate. rejoice.</div>
     </div>
+
 </body>
 </html>
