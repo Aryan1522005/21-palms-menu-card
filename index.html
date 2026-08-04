@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>21 Palms Bar & Food Menu</title>
+    <title>21 Palms Menu</title>
     <style>
-        /* This centers the button nicely on the screen */
+        /* Center the buttons on the screen and stack them */
         body, html { 
             margin: 0; 
             padding: 0; 
             height: 100%; 
             display: flex;
+            flex-direction: column; /* Stacks items vertically */
             justify-content: center;
             align-items: center;
             background-color: #f9f9f9;
+            font-family: sans-serif;
         }
 
         .menu-btn {
@@ -21,22 +23,42 @@
             width: 80%;
             max-width: 300px;
             padding: 18px;
-            background-color: #ff4757;
+            margin: 12px 0; /* Adds spacing between the two buttons */
             color: white;
             text-align: center;
             text-decoration: none;
-            font-family: sans-serif;
             font-size: 20px;
             font-weight: bold;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: opacity 0.2s ease-in-out;
+        }
+        
+        .menu-btn:hover {
+            opacity: 0.85; /* Slight fade effect when tapped/hovered */
+        }
+
+        /* Distinct colors for each button */
+        .food-btn {
+            background-color: #ff4757; /* Red */
+        }
+
+        .bar-btn {
+            background-color: #2f3542; /* Dark Grey */
         }
     </style>
 </head>
 <body>
 
-    <!-- This button links directly to your exact PDF file name -->
-    <a href="21 palms bar and food menu.pdf" target="_blank" class="menu-btn">Tap to Open Menu</a>
+    <!-- Links directly to the exact Food Menu PDF file name -->
+    <a href="The T Hotels Food Menu 291124.pdf" target="_blank" class="menu-btn food-btn">
+        🍽️ Food Menu
+    </a>
+
+    <!-- Links directly to the exact Bar Menu PDF file name -->
+    <a href="The T Hotels Bar Menu 291124.pdf" target="_blank" class="menu-btn bar-btn">
+        🍸 Bar Menu
+    </a>
 
 </body>
 </html>
